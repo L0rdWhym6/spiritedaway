@@ -1,0 +1,224 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Spirited Away
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            padding: 20px;
+            color: #000;
+            background-image: url('https://i.imgur.com/fpk30GG.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .content h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 6rem;
+            line-height: 1.2;
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .content .year {
+            font-size: 2rem;
+        }
+        .content .title {
+            font-size: 6rem;
+            line-height: 1;
+        }
+        .content .title .away {
+            display: block;
+            margin-top: 1rem;
+        }
+        .content .description {
+            max-width: 400px;
+            margin: 20px 0;
+            align-self: flex-end;
+            text-align: right;
+            transition: transform 0.3s ease;
+            font-family: 'Roboto Slab', serif;
+        }
+        .content .description:hover {
+            transform: scale(1.1);
+        }
+        .content .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px; /* Adjusted margin to move the buttons lower */
+            position: absolute;
+            left: 50px;
+            top: calc(50% + 150px); /* Adjusted position to be below the text */
+            transform: translateY(-50%);
+        }
+        .content .buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content .buttons a:hover {
+            transform: scale(1.1);
+        }
+        .content .buttons a:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        .content .buttons .trailer {
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .content .buttons .trailer:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+        .content .buttons .hanokabio {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .content .buttons .hanokabio:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+        .content .director {
+            margin-top: 20px;
+            align-self: flex-end;
+            text-align: right;
+            font-family: 'Roboto Slab', serif;
+            transition: transform 0.3s ease;
+        }
+        .content .director:hover {
+            transform: scale(1.1);
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .nav .links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav a:hover {
+            transform: scale(1.1);
+        }
+        .nav a:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        .nav .menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 3rem;
+            }
+            .content .title {
+                font-size: 3rem;
+            }
+            .nav .menu {
+                display: block;
+            }
+            .nav .links {
+                display: none;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <img alt="Background image of a scene from Spirited Away" class="background-image" height="1080" src="https://i.imgur.com/fpk30GG.png" width="1920"/>
+   <div class="nav">
+    <div class="links">
+     <a href="https://en.wikipedia.org/wiki/Studio_Ghibli" target="_blank">
+      <i class="fas fa-info-circle"></i>
+      About Studio Ghibli
+     </a>
+     <a href="https://www.kinopoisk.ru/media/article/4008769/" target="_blank">
+      <i class="fas fa-film"></i>
+      Movie List
+     </a>
+     <a href="https://ghibli.store/collections/spirited-away/" target="_blank">
+      <i class="fas fa-shopping-cart"></i>
+      Merchandise
+     </a>
+    </div>
+    <div class="menu">
+     <i class="fas fa-bars">
+     </i>
+    </div>
+   </div>
+   <div class="content">
+    <h1>
+     <span class="year">2001</span>
+     <br/>
+     <span class="title">Spirited<span class="away">Away</span></span>
+    </h1>
+    <div class="buttons">
+     <a class="trailer" href="https://www.kinopoisk.ru/film/370/" target="_blank">
+      <i class="fas fa-play"></i>
+      WATCH TRAILER
+     </a>
+     <a class="hanokabio" href="https://l0rdwhym6.github.io/HanokaBio/" target="_blank">
+      HanokaBIO
+     </a>
+    </div>
+    <p class="description">
+     Spirited Away tells the story of Chihiro Ogino (Hiiragi), a 10-year-old girl who, while moving to a new neighborhood, enters the world of Kami (spirits) of Japanese Shinto folklore. After her parents are turned into pigs by the witch Yubaba (Natsuki), Chihiro takes a job working in Yubaba's bathhouse to find a way to free herself and her parents and return to the human world.
+    </p>
+    <div class="director">
+     <p>
+      Director: Hayao Miyazaki
+     </p>
+    </div>
+  </div>
+ </body>
+</html>
